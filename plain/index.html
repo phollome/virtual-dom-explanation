@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual DOM explanation - plain</title>
+  </head>
+  <body>
+    <div id="root" />
+    <script>
+      function render() {
+        const dom = `
+        <h1>kein Virtual DOM</h1>
+        <label>dein Name:</label>
+        <input type="text" />
+        <p>Zeit: ${new Date().toLocaleTimeString()}</p>
+        `;
+        document.getElementById("root").innerHTML = dom;
+      }
+
+      setInterval(render, 1000);
+    </script>
+  </body>
+</html>
